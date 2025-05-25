@@ -22,8 +22,7 @@ jobs:
             priority: P2 should have,
             priority: P3 could have
           exempt-pr-labels: 'work in progress'    # Only exempt WIP PRs from being stale
-          labels-to-remove-when-unstale: 'status: no issue activity'
-          labels-to-remove-when-pr-unstale: 'status: no PR activity'
+          labels-to-remove-when-unstale: 'status: no issue activity,status: no PR activity'
           operations-per-run: 100
           any-of-labels: ''   # Process all issues and PRs regardless of labels
           remove-stale-when-updated: true   # Remove stale label when PR is updated
