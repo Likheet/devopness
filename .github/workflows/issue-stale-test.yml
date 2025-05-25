@@ -10,10 +10,10 @@ jobs:
       - uses: actions/stale@v9
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          days-before-pr-stale: 0      # immediately mark PR stale
-          days-before-pr-close: 0      # close PR immediately on run
-          days-before-issue-stale: 0   # immediately mark issue stale
-          days-before-issue-close: 0   # close issue immediately on run
+          days-before-pr-stale: -1     # skip marking, act on existing stale PRs
+          days-before-pr-close: 0      # close PR immediately in this run
+          days-before-issue-stale: -1  # skip marking, act on existing stale issues
+          days-before-issue-close: 0   # close issue immediately in this run
           exempt-issue-labels: >-
             good first issue,
             priority: P1 must have,
