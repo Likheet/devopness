@@ -11,9 +11,9 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           days-before-pr-stale: 0      # immediately mark PR stale
-          days-before-pr-close: 1      # close PR on next run
+          days-before-pr-close: 0      # close PR immediately on run
           days-before-issue-stale: 0   # immediately mark issue stale
-          days-before-issue-close: 1   # close issue on next run
+          days-before-issue-close: 0   # close issue immediately on run
           exempt-issue-labels: >-
             good first issue,
             priority: P1 must have,
